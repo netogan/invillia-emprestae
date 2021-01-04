@@ -13,17 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{842AE56B-EFC2-4F1F-A87B-2B90F782220F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emprestae.Services.API", "src\Emprestae.Services.API\Emprestae.Services.API.csproj", "{96CB31DE-2F00-4E51-8422-1E5A64DAF829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emprestae.Services.API", "src\Emprestae.Services.API\Emprestae.Services.API.csproj", "{96CB31DE-2F00-4E51-8422-1E5A64DAF829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emprestae.Application", "src\Emprestae.Application\Emprestae.Application.csproj", "{946794A0-6FC4-4CC6-A8AF-EA2D744306F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emprestae.Application", "src\Emprestae.Application\Emprestae.Application.csproj", "{946794A0-6FC4-4CC6-A8AF-EA2D744306F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emprestae.Domain", "src\Emprestae.Domain\Emprestae.Domain.csproj", "{93AEADA1-D124-443D-84AA-CB3C0BBAC92C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emprestae.Domain", "src\Emprestae.Domain\Emprestae.Domain.csproj", "{93AEADA1-D124-443D-84AA-CB3C0BBAC92C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{4B54D687-F0B3-407F-9D14-3E0194FEFCD4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{F0EC34FD-1EAE-462A-8DC8-2E3B89E35A6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emprestae.Infra.Data", "src\Emprestae.Infra.Data\Emprestae.Infra.Data.csproj", "{6E2E0A77-9C6D-462F-8D43-643F8389DABD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emprestae.Infra.Data", "src\Emprestae.Infra.Data\Emprestae.Infra.Data.csproj", "{6E2E0A77-9C6D-462F-8D43-643F8389DABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
