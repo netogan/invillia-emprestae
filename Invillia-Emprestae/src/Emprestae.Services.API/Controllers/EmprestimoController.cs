@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Emprestae.Services.API.Controllers
 {
     [ApiController]
-    [Route("Emprestimo")]
+    [Route("api/[controller]")]
     public class EmprestimoController : ControllerBase
     {
         private readonly IEmprestimoAppService _emprestimoAppService;

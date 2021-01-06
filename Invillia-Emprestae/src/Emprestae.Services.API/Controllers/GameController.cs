@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Emprestae.Services.API.Controllers
 {
     [ApiController]
-    [Route("Game")]
+    [Route("api/[controller]")]
     public class GameController : ControllerBase
     {
         private readonly IGameAppService _gameAppService;
