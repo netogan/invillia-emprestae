@@ -5,6 +5,7 @@ using Emprestae.Application.Interfaces;
 using Emprestae.Domain.Interfaces.Repository;
 using Emprestae.Domain.Interfaces.Service;
 using Emprestae.Domain.Services;
+using Emprestae.Infra.CrossCutting.Identity.Context;
 using Emprestae.Infra.Data.Context;
 using Emprestae.Infra.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -31,6 +32,8 @@ namespace Emprestae.Services.API
             services.AddControllers();
 
             services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<AuthDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //Configurações AUTOMAPPER
             services.AddAutoMapper(typeof(MappingProfile));

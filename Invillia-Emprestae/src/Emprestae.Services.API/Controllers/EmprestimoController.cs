@@ -21,7 +21,13 @@ namespace Emprestae.Services.API.Controllers
         [Route("Adicionar")]
         public async Task<ActionResult> Adicionar(EmprestimoViewModel emprestimo)
         {
+            if (emprestimo.GameId == null || emprestimo.AmigoId == null)
+                return BadRequest("O identificador do amigo ou do game está ausente");
+
             var ret = await _emprestimoAppService.Adicionar(emprestimo);
+
+            if (ret == null)
+                return BadRequest("Não é possível fazer mais empréstimos para esse game. Todos já estão emprestados");
 
             return Ok(ret);
         }
@@ -52,9 +58,9 @@ namespace Emprestae.Services.API.Controllers
 
         [HttpGet]
         [Route("ObterPorId")]
-        public async Task<ActionResult> ObterPorId(Guid id)
+        public async Task<ActionResult> ObterPorId(Guid emprestimoId)
         {
-            var ret = await _emprestimoAppService.ObterPorId(id);
+            var ret = await _emprestimoAppService.ObterPorId(emprestimoId);
 
             if (ret == null)
                 return NotFound();
@@ -64,9 +70,9 @@ namespace Emprestae.Services.API.Controllers
 
         [HttpDelete]
         [Route("Remover")]
-        public async Task<ActionResult> Remover(Guid id)
+        public async Task<ActionResult> Remover(Guid emprestimoId)
         {
-            _emprestimoAppService.Remover(id);
+            _emprestimoAppService.Remover(emprestimoId);
 
             return Ok();
         }

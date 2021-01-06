@@ -47,6 +47,7 @@ namespace Emprestae.Domain.Services
         public void Remover(Guid id)
         {
             _gameRepository.Remover(id);
+            _gameRepository.SaveChanges();
         }
 
         public void Dispose()

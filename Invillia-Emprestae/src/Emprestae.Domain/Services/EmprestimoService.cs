@@ -36,6 +36,7 @@ namespace Emprestae.Domain.Services
                 return null;
 
             emprestimo.EmprestimoId = Guid.NewGuid();
+            emprestimo.DataEmprestimo = DateTime.UtcNow;
 
             _emprestimoRepository.Adicionar(emprestimo);
             _emprestimoRepository.SaveChanges();
@@ -75,6 +76,7 @@ namespace Emprestae.Domain.Services
         public void Remover(Guid id)
         {
             _emprestimoRepository.Remover(id);
+            _emprestimoRepository.SaveChanges();
         }
 
         public void Dispose()

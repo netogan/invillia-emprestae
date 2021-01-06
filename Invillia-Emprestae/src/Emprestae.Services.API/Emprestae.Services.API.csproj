@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Emprestae.Application\Emprestae.Application.csproj" />
+    <ProjectReference Include="..\Emprestae.Infra.CrossCutting.Identity\Emprestae.Infra.CrossCutting.Identity.csproj" />
     <ProjectReference Include="..\Emprestae.Infra.Data\Emprestae.Infra.Data.csproj" />
   </ItemGroup>
 

@@ -43,9 +43,9 @@ namespace Emprestae.Services.API.Controllers
 
         [HttpGet]
         [Route("ObterPorId")]
-        public async Task<ActionResult> ObterPorId(Guid id)
+        public async Task<ActionResult> ObterPorId(Guid amigoId)
         {
-            var ret = await _amigoAppService.ObterPorId(id);
+            var ret = await _amigoAppService.ObterPorId(amigoId);
 
             if (ret == null)
                 return NotFound();
@@ -55,9 +55,9 @@ namespace Emprestae.Services.API.Controllers
 
         [HttpDelete]
         [Route("Remover")]
-        public async Task<ActionResult> Remover(Guid id)
+        public async Task<ActionResult> Remover(Guid amigoId)
         {
-            _amigoAppService.Remover(id);
+            _amigoAppService.Remover(amigoId);
 
             return Ok();
         }

@@ -47,6 +47,7 @@ namespace Emprestae.Domain.Services
         public void Remover(Guid id)
         {
             _amigoRepository.Remover(id);
+            _amigoRepository.SaveChanges();
         }
 
         public void Dispose()
