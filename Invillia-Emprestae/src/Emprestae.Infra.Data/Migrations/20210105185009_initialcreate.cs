@@ -11,9 +11,8 @@ namespace Emprestae.Infra.Data.Migrations
                 name: "Amigos",
                 columns: table => new
                 {
-                    AmigoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FlagExclusao = table.Column<bool>(type: "bit", nullable: false)
+                    AmigoId = table.Column<Guid>(nullable: false),
+                    Nome = table.Column<string>(maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -24,10 +23,10 @@ namespace Emprestae.Infra.Data.Migrations
                 name: "Emprestimos",
                 columns: table => new
                 {
-                    EmprestimoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    GameId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    AmigoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DataEmprestimo = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    EmprestimoId = table.Column<Guid>(nullable: false),
+                    GameId = table.Column<Guid>(nullable: false),
+                    AmigoId = table.Column<Guid>(nullable: false),
+                    DataEmprestimo = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,11 +37,11 @@ namespace Emprestae.Infra.Data.Migrations
                 name: "Games",
                 columns: table => new
                 {
-                    GameId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Genero = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Desenvolvedores = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Quantidade = table.Column<int>(type: "int", nullable: false)
+                    GameId = table.Column<Guid>(nullable: false),
+                    Nome = table.Column<string>(maxLength: 200, nullable: true),
+                    Genero = table.Column<string>(maxLength: 200, nullable: true),
+                    Desenvolvedores = table.Column<string>(maxLength: 200, nullable: true),
+                    Quantidade = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

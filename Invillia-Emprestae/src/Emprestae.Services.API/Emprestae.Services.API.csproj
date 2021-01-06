@@ -9,9 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Emprestae.Application\Emprestae.Application.csproj" />
     <ProjectReference Include="..\Emprestae.Infra.Data\Emprestae.Infra.Data.csproj" />
   </ItemGroup>
 

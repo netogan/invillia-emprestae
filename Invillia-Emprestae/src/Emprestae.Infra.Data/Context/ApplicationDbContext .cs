@@ -13,15 +13,13 @@ namespace Emprestae.Infra.Data.Context
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            modelBuilder.RemovePluralizingTableNameConvention();
+            builder.ApplyConfiguration(new GameConfig());
+            builder.ApplyConfiguration(new AmigoConfig());
+            builder.ApplyConfiguration(new EmprestimoConfig());
 
-            modelBuilder.ApplyConfiguration(new GameConfig());
-            modelBuilder.ApplyConfiguration(new AmigoConfig());
-            modelBuilder.ApplyConfiguration(new EmprestimoConfig());
-
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(builder);
         }
     }
 }

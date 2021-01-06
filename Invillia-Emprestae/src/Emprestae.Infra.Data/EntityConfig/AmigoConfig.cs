@@ -10,6 +10,8 @@ namespace Emprestae.Infra.Data.EntityConfig
         {
             builder.ToTable("Amigos");
             builder.HasKey(p => p.AmigoId);
+
+            builder.Property(p => p.Nome).HasMaxLength(200);
         }
     }
 }

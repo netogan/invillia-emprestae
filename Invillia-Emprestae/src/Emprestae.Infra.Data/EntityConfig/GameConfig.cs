@@ -10,6 +10,10 @@ namespace Emprestae.Infra.Data.EntityConfig
         {
             builder.ToTable("Games");
             builder.HasKey(p => p.GameId);
+
+            builder.Property(p => p.Nome).HasMaxLength(200);
+            builder.Property(p => p.Genero).HasMaxLength(200);
+            builder.Property(p => p.Desenvolvedores).HasMaxLength(200);
         }
     }
 }

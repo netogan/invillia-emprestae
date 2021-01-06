@@ -6,6 +6,5 @@ namespace Emprestae.Domain.Entities
     {
         public Guid AmigoId { get; set; }
         public string Nome { get; set; }
-        public bool FlagExclusao { get; set; }
     }
 }
