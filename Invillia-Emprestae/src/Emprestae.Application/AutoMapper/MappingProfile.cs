@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Emprestae.Application.ViewModel;
 using Emprestae.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace Emprestae.Application.AutoMapper
 {
@@ -16,6 +17,16 @@ namespace Emprestae.Application.AutoMapper
 
             CreateMap<Emprestimo, EmprestimoViewModel>();
             CreateMap<EmprestimoViewModel, Emprestimo>();
+
+            CreateMap<RegisterUserViewModel, IdentityUser>()
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email))
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+                .ForMember(dest => dest.EmailConfirmed, opt => opt.MapFrom(src => true));
+
+            CreateMap<LoginUserViewModel, IdentityUser>()
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email))
+                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+                .ForMember(dest => dest.EmailConfirmed, opt => opt.MapFrom(src => true));
         }
     }
 }

@@ -1,11 +1,13 @@
 ﻿using Emprestae.Application.Interfaces;
 using Emprestae.Application.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
 namespace Emprestae.Services.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class AmigoController : ControllerBase
